@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="w3.css">
+		<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+		<title>Project Driverus</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="masonry.pkgd.min.js"></script>
+		<!--<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>-->
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+
+		<script>
+    
+    		function generate() {
+    		/*Web Browsers*/
+			var checkBoxchrome = document.getElementById("chrome");
+			if (checkBoxchrome.checked == true){window.open("https://www.google.com/chrome/");}
+        	var checkBoxfirefox = document.getElementById("firefox");
+    		if (checkBoxfirefox.checked == true){window.open("https://www.mozilla.org/en-US/firefox/new/");}
+        	var checkBoxopera = document.getElementById("opera");
+    		if (checkBoxopera.checked == true){window.open("https://www.opera.com/en/download");}
+        	var checkBoxtor = document.getElementById("tor");
+    		if (checkBoxtor.checked == true){window.open("https://www.torproject.org/download/");}
+        	var checkBoxbrave = document.getElementById("brave");
+        	if (checkBoxbrave.checked == true){window.open("https://www.brave.com/download/");}
+            var checkBoxedge = document.getElementById("edge");
+            if (checkBoxedge.checked == true){window.open("https://www.microsoft.com/en-us/edge");}
+        	
+    		/*Drivers*/
+  			var checkBoxnvidia = document.getElementById("nvidia");
+        	if (checkBoxnvidia.checked == true){window.open("https://www.geforce.com/drivers");}
+        	var checkBoxamd = document.getElementById("amd");
+    		if (checkBoxamd.checked == true){window.open("https://www.amd.com/en/support");}
+        	var checkBoxintel = document.getElementById("intel");
+    		if (checkBoxintel.checked == true){window.open("https://downloadcenter.intel.com/");}
+        	var checkBoxasus = document.getElementById("asus");
+    		if (checkBoxasus.checked == true){window.open("https://www.asus.com/en/support");}
+        	var checkBoxmsi = document.getElementById("msi");
+    		if (checkBoxmsi.checked == true){window.open("https://www.msi.com/support/download/");}
+        	var checkBoxgigabyte = document.getElementById("gigabyte");
+    		if (checkBoxgigabyte.checked == true){window.open("https://www.gigabyte.com/Support");}
+        	var checkBoxasrock = document.getElementById("asrock");
+    		if (checkBoxasrock.checked == true){window.open("https://www.asrock.com/support/");}
+
+    		/*Gaming Clients*/
+        	var checkBoxsteam = document.getElementById("steam");
+        	if (checkBoxsteam.checked == true){window.open("https://store.steampowered.com/about/");}
+        	var checkBoxorigin = document.getElementById("origin");
+    		if (checkBoxorigin.checked == true){window.open("https://www.origin.com/irl/en-us/store/download");}
+        	var checkBoxgog = document.getElementById("gog");
+    		if (checkBoxgog.checked == true){window.open("https://www.gog.com/galaxy");}
+        	var checkBoxuplay = document.getElementById("uplay");
+    		if (checkBoxuplay.checked == true){window.open("https://uplay.ubisoft.com/");}
+        	var checkBoxbattlenet = document.getElementById("battlenet");
+    		if (checkBoxbattlenet.checked == true){window.open("https://www.blizzard.com/en-sg/apps/battle.net/desktop");}
+        	var checkBoxbethesda = document.getElementById("bethesda");
+    		if (checkBoxbethesda.checked == true){window.open("https://bethesda.net/game/bethesda-launcher");}
+        	var checkBoxegs = document.getElementById("egs");
+    		if (checkBoxegs.checked == true){window.open("https://www.epicgames.com/store/en-US/download");}
+            var checkBoxrgl = document.getElementById("rgl");
+            if (checkBoxrgl.checked == true){window.open("https://socialclub.rockstargames.com/rockstar-games-launcher");}
+        	var checkBoxgeforcenow = document.getElementById("geforcenow");
+    		if (checkBoxgeforcenow.checked == true){window.open("https://www.nvidia.com/en-us/geforce-now/download/");}
+        	var checkBoxminecraft = document.getElementById("minecraft");
+    		if (checkBoxminecraft.checked == true){window.open("https://www.minecraft.net/en-us/download/");}
+
+    		/*Social*/
+        	var checkBoxdiscord = document.getElementById("discord");
+        	if (checkBoxdiscord.checked == true){window.open("https://discordapp.com/download");}
+        	var checkBoxteamspeak = document.getElementById("teamspeak");
+    		if (checkBoxteamspeak.checked == true){window.open("https://teamspeak.com/en/downloads/");}
+        	var checkBoxskype = document.getElementById("skype");
+    		if (checkBoxskype.checked == true){window.open("https://www.skype.com/en/get-skype/");}
+        	var checkBoxmumble = document.getElementById("mumble");
+    		if (checkBoxmumble.checked == true){window.open("https://www.mumble.com/mumble-download.php");}
+
+    		/*Media*/
+        	var checkBoxvlc = document.getElementById("vlc");
+    		if (checkBoxvlc.checked == true){window.open("https://www.videolan.org/vlc/");}
+        	var checkBoxmpchc = document.getElementById("mpchc");
+    		if (checkBoxmpchc.checked == true){window.open("https://github.com/clsid2/mpc-hc/releases");}
+        	var checkBoxkodi = document.getElementById("kodi");
+    		if (checkBoxkodi.checked == true){window.open("https://kodi.tv/download");}
+        	var checkBoxplex = document.getElementById("plex");
+    		if (checkBoxplex.checked == true){window.open("https://www.plex.tv/media-server-downloads/");}
+        	var checkBoxspotify = document.getElementById("spotify");
+    		if (checkBoxspotify.checked == true){window.open("https://www.spotify.com/cz/download/other/");}
+        	var checkBoxaudacity = document.getElementById("audacity");
+    		if (checkBoxaudacity.checked == true){window.open("https://www.audacityteam.org/download/");}
+        	var checkBoxitunes = document.getElementById("itunes");
+    		if (checkBoxitunes.checked == true){window.open("https://support.apple.com/downloads/itunes");}
+    		var checkBoxmakemkv = document.getElementById("makemkv");
+    		if (checkBoxmakemkv.checked == true){window.open("https://www.makemkv.com/download/");}
+            var checkBoxhandbrake = document.getElementById("handbrake");
+            if (checkBoxhandbrake.checked == true){window.open("https://handbrake.fr/downloads.php");}
+
+    		/*Gaming*/
+        	var checkBoxjava = document.getElementById("java");
+    		if (checkBoxjava.checked == true){window.open("https://www.java.com/en/download/manual.jsp");}
+        	var checkBoxppsspp = document.getElementById("ppsspp");
+    		if (checkBoxppsspp.checked == true){window.open("https://ppsspp.org/downloads.html");}
+        	var checkBoxrpcs3 = document.getElementById("rpcs3");
+    		if (checkBoxrpcs3.checked == true){window.open("https://rpcs3.net/download");}
+        	var checkBoxdolphinemulator = document.getElementById("dolphinemulator");
+    		if (checkBoxdolphinemulator.checked == true){window.open("https://dolphin-emu.org/download/");}
+        	var checkBoxcemuemulator = document.getElementById("cemuemulator");
+    		if (checkBoxcemuemulator.checked == true){window.open("https://cemu.info/#download");}
+        	var checkBoxcheatengine = document.getElementById("cheatengine");
+    		if (checkBoxcheatengine.checked == true){window.open("https://www.cheatengine.org/downloads.php");}
+        	var checkBoxradminvpn = document.getElementById("radminvpn");
+    		if (checkBoxradminvpn.checked == true){window.open("https://www.radmin-vpn.com/");}
+    		var checkBoxhaamchi = document.getElementById("hamachi");
+    		if (checkBoxhaamchi.checked == true){window.open("https://www.vpn.net/");}
+    		
+    		/*File Archive*/
+    		var checkBox7zip = document.getElementById("7zip");
+    		if (checkBox7zip.checked == true){window.open("https://www.7-zip.org/download.html");}
+        	var checkBoxwinrar = document.getElementById("winrar");
+    		if (checkBoxwinrar.checked == true){window.open("https://www.win-rar.com/download.html");}
+        	var checkBoxpeazip = document.getElementById("peazip");
+    		if (checkBoxpeazip.checked == true){window.open("https://www.peazip.org/");}
+
+    		/*Torrents*/
+        	var checkBoxqbittorrent = document.getElementById("qbittorrent");
+    		if (checkBoxqbittorrent.checked == true){window.open("https://www.qbittorrent.org/download.php");}
+        	var checkBoxdeluge = document.getElementById("deluge");
+    		if (checkBoxdeluge.checked == true){window.open("https://dev.deluge-torrent.org/wiki/Download");}
+        	var checkBoxutorrent = document.getElementById("utorrent");
+    		if (checkBoxutorrent.checked == true){window.open("https://www.utorrent.com/desktop/");}
+        	var checkBoxbittorrent = document.getElementById("bittorrent");
+    		if (checkBoxbittorrent.checked == true){window.open("https://www.bittorrent.com/downloads/windows/");}
+
+    		/*System Monitoring*/
+        	var checkBoxcpuz = document.getElementById("cpuz");
+    		if (checkBoxcpuz.checked == true){window.open("https://www.cpuid.com/softwares/cpu-z.html");}
+        	var checkBoxhwmonitor = document.getElementById("hwmonitor");
+    		if (checkBoxhwmonitor.checked == true){window.open("https://www.cpuid.com/softwares/hwmonitor.html");}
+        	var checkBoxcoretemp = document.getElementById("coretemp");
+    		if (checkBoxcoretemp.checked == true){window.open("https://www.alcpu.com/CoreTemp/");}
+        	var checkBoxmsiafterburner = document.getElementById("msiafterburner");
+    		if (checkBoxmsiafterburner.checked == true){window.open("https://www.msi.com/page/afterburner");}
+
+    		/*Peripherals and RGB*/
+    		var checkBoxlogitechghub = document.getElementById("logitechghub");
+    		if (checkBoxlogitechghub.checked == true){window.open("https://www.logitechg.com/en-us/innovation/g-hub.html");}
+        	var checkBoxsteelseriesengine = document.getElementById("steelseriesengine");
+    		if (checkBoxsteelseriesengine.checked == true){window.open("https://steelseries.com/engine");}
+        	var checkBoxrazer = document.getElementById("razer");
+    		if (checkBoxrazer.checked == true){window.open("https://www.razer.com/downloads");}
+        	var checkBoxcorsairicue = document.getElementById("corsairicue");
+    		if (checkBoxcorsairicue.checked == true){window.open("https://www.corsair.com/us/en/downloads");}
+        	var checkBoxasusaurasync = document.getElementById("asusaurasync");
+    		if (checkBoxasusaurasync.checked == true){window.open("https://www.asus.com/campaign/aura/global/download.php");}
+
+            /*Utilities*/
+            var checkBoxnotepad = document.getElementById("notepad");
+            if (checkBoxnotepad.checked == true){window.open("https://notepad-plus-plus.org/downloads/");}
+            var checkBoxlibreoffice = document.getElementById("libreoffice");
+            if (checkBoxlibreoffice.checked == true){window.open("https://www.libreoffice.org/download/download/");}
+            var checkBoxteracopy = document.getElementById("teracopy");
+            if (checkBoxteracopy.checked == true){window.open("https://www.codesector.com/teracopy");}
+            var checkBoxrainmeter = document.getElementById("rainmeter");
+            if (checkBoxrainmeter.checked == true){window.open("https://www.rainmeter.net/");}
+            var checkBoxlightshot = document.getElementById("lightshot");
+            if (checkBoxlightshot.checked == true){window.open("https://app.prntscr.com/cs/download.html");}
+            var checkBoxdefraggler = document.getElementById("defraggler");
+            if (checkBoxdefraggler.checked == true){window.open("https://www.ccleaner.com/defraggler");}
+            var checkBoxfilezilla = document.getElementById("filezilla");
+            if (checkBoxfilezilla.checked == true){window.open("https://filezilla-project.org/download.php");}
+
+    		/*Creativity*/
+    		var checkBoxadobecc = document.getElementById("adobecc");
+    		if (checkBoxadobecc.checked == true){window.open("https://www.adobe.com/creativecloud/desktop-app.html");}
+        	var checkBoxdavinciresolve = document.getElementById("davinciresolve");
+    		if (checkBoxdavinciresolve.checked == true){window.open("https://www.blackmagicdesign.com/products/davinciresolve/");}
+        	var checkBoxblender = document.getElementById("blender");
+    		if (checkBoxblender.checked == true){window.open("https://www.blender.org/download/");}
+        	var checkBoxgimp = document.getElementById("gimp");
+    		if (checkBoxgimp.checked == true){window.open("https://www.gimp.org/downloads/");}
+
+    		/*Development*/
+    		var checkBoxvisualstudiocode = document.getElementById("visualstudiocode");
+    		if (checkBoxvisualstudiocode.checked == true){window.open("https://visualstudio.microsoft.com/downloads/");}
+        	var checkBoxsublimetext = document.getElementById("sublimetext");
+    		if (checkBoxsublimetext.checked == true){window.open("https://www.sublimetext.com/3");}
+        	var checkBoxautohotkey = document.getElementById("autohotkey");
+    		if (checkBoxautohotkey.checked == true){window.open("https://www.autohotkey.com/");}
+        	var checkBoxgit = document.getElementById("git");
+    		if (checkBoxgit.checked == true){window.open("https://git-scm.com/downloads");}
+			}
+
+		</script>
+
+		<script>	function popup() {
+						window.open('success.html', '_blank')
+						window.open('success.html', '_blank')}
+		</script>
+
+	</head>
+
+
+	<body>
+
+			<ul class="navbar">
+				<a href="/"><img src="images/logov2.png" style="width: 350px; height: 70px; bottom: 0px;cursor: pointer;"></a>
+				<li class="float_right"><a onclick="document.getElementById('supportmodal').style.display='block'" class="navbar_right">Support PD</a></li>
+                <li class="float_right"><a onclick="document.getElementById('feedbackmodal').style.display='block'" class="navbar_right">Feedback</a></li>
+				<li class="float_right"><a onclick="document.getElementById('comingsoonmodal').style.display='block'" class="navbar_right">Coming soon</a></li>
+				<li class="float_right"><a onclick="document.getElementById('newsmodal').style.display='block'" class="navbar_right">News</a></li>
+				<li class="float_right"><a onclick="document.getElementById('aboutmodal').style.display='block'" class="navbar_right">About</a></li>
+				<li class="float_right" style="margin-top: 21px; margin-right: 30px"><a href="https://twitter.com/ProjectDriverus?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="en" data-show-count="false">Follow @ProjectDriverus</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+			</ul>
+
+
+		<div class="container text-center">
+			<br>
+			<h2>1. Allow Pop-ups in your browser</h2>
+			<button class="button" title="This will trigger po-pup blocker in your browser so you can easily disable it" onclick="popup(); document.getElementById('chromemodal').style.display='block'">Chrome / Opera / Firefox</button>
+			<button class="button" onclick="document.getElementById('edgemodal').style.display='block'">MS Edge</button>
+		</div>
+
+	<div>
+		<div class="container">
+			<br>
+			<h2 class="text-center">2. Select apps you want</h2>
+		</div>
+        
+<!--Výběr-->
+		<ul class="list-unstyled center-block js-masonry" data-masonry-options='{"fitWidth": true}'>
+
+<!--Browsers-->
+			<li class="homepage-app-section">
+				<h2>Web Browsers</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.google.com/chrome">
+					<input type="checkbox" id="chrome" class="decheck"><img src="images/Icon/chrome.png">Google Chrome</label>
+					<br>
+					<label class="checkboxstyle" title="www.mozilla.org/en-US/firefox/new">
+					<input type="checkbox" id="firefox" class="decheck"><img src="images/Icon/firefox.png">Mozilla Firefox</label>
+					<br>
+					<label class="checkboxstyle" title="www.opera.com/en/download">
+					<input type="checkbox" id="opera"><img src="images/Icon/opera.png">Opera</label>
+					<br>
+					<label class="checkboxstyle" title="www.torproject.org/download">
+					<input type="checkbox" id="tor"><img src="images/Icon/tor.png">Tor</label>
+					<br>
+					<label class="checkboxstyle" title="www.brave.com/download">
+					<input type="checkbox" id="brave"><img src="images/Icon/brave.png">Brave</label>
+                    <br>
+                    <label class="checkboxstyle" title="www.microsoft.com/en-us/edge">
+                    <input type="checkbox" id="edge"><img src="images/Icon/edge.png">Microsoft Edge</label>
+				</ul>
+			</li>
+
+<!--Drivers-->
+			<li class="homepage-app-section">
+				<h2>Drivers</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.geforce.com/drivers">
+					<input type="checkbox" id="nvidia"><img src="images/Icon/nvidia.png">NVIDIA</label>
+					<br>
+					<label class="checkboxstyle" title="www.amd.com/en/support">
+					<input type="checkbox" id="amd"><img src="images/Icon/amd.png">AMD</label>
+					<br>
+					<label class="checkboxstyle" title="www.amd.com/en/support">
+					<input type="checkbox" id="intel"><img src="images/Icon/intel.png">Intel</label>
+					<br>
+					<label class="checkboxstyle" title="www.asus.com/en/support">
+					<input type="checkbox" id="asus"><img src="images/Icon/asus.png">Asus</label>
+					<br>
+					<label class="checkboxstyle" title="www.msi.com/support/download">
+					<input type="checkbox" id="msi"><img src="images/Icon/msi.png">MSI</label>
+					<br>
+					<label class="checkboxstyle" title="www.gigabyte.com/Support">
+					<input type="checkbox" id="gigabyte"><img src="images/Icon/gigabyte.png">Gigabyte</label>
+					<br>
+					<label class="checkboxstyle" title="www.asrock.com/support">
+					<input type="checkbox" id="asrock"><img src="images/Icon/asrock.png">ASRock</label>
+				</ul>
+			</li>
+
+<!--Gaming Clients-->
+			<li class="homepage-app-section">
+				<h2>Gaming Clients</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.store.steampowered.com/about">
+					<input type="checkbox" id="steam"><img src="images/Icon/steam.png">Steam</label>
+					<br>
+					<label class="checkboxstyle" title="www.origin.com/irl/en-us/store/download">
+					<input type="checkbox" id="origin"><img src="images/Icon/origin.png">Origin</label>
+					<br>
+					<label class="checkboxstyle" title="www.gog.com/galaxy">
+					<input type="checkbox" id="gog"><img src="images/Icon/gog.png">GOG Galaxy</label>
+					<br>
+					<label class="checkboxstyle" title="www.uplay.ubisoft.com">
+					<input type="checkbox" id="uplay"><img src="images/Icon/uplay.png">Uplay</label>
+					<br>
+					<label class="checkboxstyle" title="www.blizzard.com/en-sg/apps/battle.net/desktop">
+					<input type="checkbox" id="battlenet"><img src="images/Icon/battlenet.png">Battle.net</label>
+					<br>
+					<label class="checkboxstyle" title="www.bethesda.net/game/bethesda-launcher">
+					<input type="checkbox" id="bethesda"><img src="images/Icon/bethesda.png">Bethesda Launcher</label>
+					<br>
+					<label class="checkboxstyle" title="www.epicgames.com/store/en-US/download">
+					<input type="checkbox" id="egs"><img src="images/Icon/egs.png">Epic Game Store</label>
+                    <br>
+                    <label class="checkboxstyle" title="www.socialclub.rockstargames.com/rockstar-games-launcher">
+                    <input type="checkbox" id="rgl"><img src="images/Icon/rgl.png">Rockstar Games launcher</label>
+					<br>
+					<label class="checkboxstyle" title="www.nvidia.com/en-us/geforce-now/download">
+					<input type="checkbox" id="geforcenow"><img src="images/Icon/nvidia.png">Geforce NOW</label>
+					<br>
+					<label class="checkboxstyle" title="www.minecraft.net/en-us/download">
+					<input type="checkbox" id="minecraft"><img src="images/Icon/minecraft.png">Minecraft.net</label>
+				</ul>
+			</li>
+
+<!--Social-->
+			<li class="homepage-app-section">
+				<h2>Social</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.discordapp.com/download">
+					<input type="checkbox" id="discord"><img src="images/Icon/discord.png">Discord</label>
+					<br>
+					<label class="checkboxstyle" title="www.teamspeak.com/en/downloads">
+					<input type="checkbox" id="teamspeak"><img src="images/Icon/teamspeak.png">Team Speak</label>
+					<br>
+					<label class="checkboxstyle" title="www.skype.com/en/get-skype">
+					<input type="checkbox" id="skype"><img src="images/Icon/skype.png">Skype</label>
+					<br>
+					<label class="checkboxstyle" title="www.mumble.com/mumble-download">
+					<input type="checkbox" id="mumble"><img src="images/Icon/mumble.png">Mumble</label>
+				</ul>
+			</li>
+
+<!--Media-->
+			<li class="homepage-app-section">
+				<h2>Media</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.videolan.org/vlc">
+					<input type="checkbox" id="vlc"><img src="images/Icon/vlc.png">VLC</label>
+					<br>
+					<label class="checkboxstyle" title="www.github.com/clsid2/mpc-hc/releases">
+					<input type="checkbox" id="mpchc"><img src="images/Icon/mpchc.png">MPC-HC</label>
+					<br>
+					<label class="checkboxstyle" title="www.kodi.tv/download">
+					<input type="checkbox" id="kodi"><img src="images/Icon/kodi.png">Kodi</label>
+					<br>
+					<label class="checkboxstyle" title="www.plex.tv/media-server-downloads">
+					<input type="checkbox" id="plex"><img src="images/Icon/plex.png">Plex</label>
+					<br>
+					<label class="checkboxstyle" title="www.spotify.com/cz/download/other">
+					<input type="checkbox" id="spotify"><img src="images/Icon/spotify.png">Spotify</label>
+					<br>
+					<label class="checkboxstyle" title="www.audacityteam.org/download">
+					<input type="checkbox" id="audacity"><img src="images/Icon/audacity.png">Audacity</label>
+					<br>
+					<label class="checkboxstyle" title="www.support.apple.com/downloads/itunes">
+					<input type="checkbox" id="itunes"><img src="images/Icon/itunes.png">iTunes</label>
+					<br>
+					<label class="checkboxstyle" title="www.makemkv.com/download">
+					<input type="checkbox" id="makemkv"><img src="images/Icon/makemkv.png">MakeMKV</label>
+                    <br>
+                    <label class="checkboxstyle" title="www.handbrake.fr/downloads.php">
+                    <input type="checkbox" id="handbrake"><img src="images/Icon/handbrake.png">HandBrake</label>
+				</ul>
+			</li>
+
+<!--Gaming-->
+			<li class="homepage-app-section">
+				<h2>Gaming</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.java.com/en/download/manual.jsp">
+					<input type="checkbox" id="java"><img src="images/Icon/java.png">Java</label>
+					<br>
+					<label class="checkboxstyle" title="www.ppsspp.org/downloads.html">
+					<input type="checkbox" id="ppsspp"><img src="images/Icon/ppsspp.png">PPSSPP</label>
+					<br>
+					<label class="checkboxstyle" title="www.rpcs3.net/download">
+					<input type="checkbox" id="rpcs3"><img src="images/Icon/rpcs3.png">RPCS3</label>
+					<br>
+					<label class="checkboxstyle" title="www.dolphin-emu.org/download">
+					<input type="checkbox" id="dolphinemulator"><img src="images/Icon/dolphinemulator.png">Dolphin Emulator</label>
+					<br>
+					<label class="checkboxstyle" title="www.cemu.info/#download">
+					<input type="checkbox" id="cemuemulator"><img src="images/Icon/cemuemulator.png">Cemu Emulator</label>
+					<br>
+					<label class="checkboxstyle" title="www.cheatengine.org/downloads.php">
+					<input type="checkbox" id="cheatengine"><img src="images/Icon/cheatengine.png">Cheat Engine</label>
+					<br>
+					<label class="checkboxstyle" title="www.radmin-vpn.com">
+					<input type="checkbox" id="radminvpn"><img src="images/Icon/radminvpn.png">RadminVPN</label>
+					<br>
+					<label class="checkboxstyle" title="www.vpn.net">
+					<input type="checkbox" id="hamachi"><img src="images/Icon/hamachi.png">Hamachi</label>
+				</ul>
+			</li>
+
+<!--File Archive-->
+			<li class="homepage-app-section">
+				<h2>File Archive</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.7-zip.org/download">
+					<input type="checkbox" id="7zip"><img src="images/Icon/7zip.png">7-Zip</label>
+					<br>
+					<label class="checkboxstyle" title="www.win-rar.com/download">
+					<input type="checkbox" id="winrar"><img src="images/Icon/winrar.png">WinRAR</label>
+					<br>
+					<label class="checkboxstyle" title="www.peazip.org">
+					<input type="checkbox" id="peazip"><img src="images/Icon/peazip.png">PeaZip</label>
+				</ul>
+			</li>
+
+<!--Torrents-->
+			<li class="homepage-app-section">
+				<h2>Torrents</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.qbittorrent.org/download">
+					<input type="checkbox" id="qbittorrent"><img src="images/Icon/qbittorrent.png">qBittorrent</label>
+					<br>
+					<label class="checkboxstyle" title="www.dev.deluge-torrent.org/wiki/Download">
+					<input type="checkbox" id="deluge"><img src="images/Icon/deluge.png">Deluge</label>
+					<br>
+					<label class="checkboxstyle" title="www.utorrent.com/desktop">
+					<input type="checkbox" id="utorrent"><img src="images/Icon/utorrent.png">µTorrent</label>
+					<br>
+					<label class="checkboxstyle" title="www.bittorrent.com/downloads/windows">
+					<input type="checkbox" id="bittorrent"><img src="images/Icon/bittorrent.png">BitTorrent</label>
+				</ul>
+			</li>
+
+<!--System Monitoring-->
+			<li class="homepage-app-section">
+				<h2>System Monitoring</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.cpuid.com/softwares/cpu-z">
+					<input type="checkbox" id="cpuz"><img src="images/Icon/cpuz.png">CPU-Z</label>
+					<br>
+					<label class="checkboxstyle" title="www.cpuid.com/softwares/hwmonitor">
+					<input type="checkbox" id="hwmonitor"><img src="images/Icon/hwmonitor.png">HW-Monitor</label>
+					<br>
+					<label class="checkboxstyle" title="www.alcpu.com/CoreTemp">
+					<input type="checkbox" id="coretemp"><img src="images/Icon/coretemp.png">Core Temp</label>
+					<br>
+					<label class="checkboxstyle" title="www.msi.com/page/afterburner">
+					<input type="checkbox" id="msiafterburner"><img src="images/Icon/msiafterburner.png">MSI Afterburner</label>
+				</ul>
+			</li>
+
+<!--Peripherals and RGB-->
+			<li class="homepage-app-section">
+				<h2>Peripherals and RGB</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.logitechg.com/en-us/innovation/g-hub.html">
+					<input type="checkbox" id="logitechghub"><img src="images/Icon/logitechghub.png">Logitech G HUB</label>
+					<br>
+					<label class="checkboxstyle" title="www.steelseries.com/engine">
+					<input type="checkbox" id="steelseriesengine"><img src="images/Icon/steelseriesengine.png">Steelseries Engine</label>
+					<br>
+					<label class="checkboxstyle" title="www.razer.com/downloads">
+					<input type="checkbox" id="razer"><img src="images/Icon/razer.png">Razer Synapse/Chroma</label>
+					<br>
+					<label class="checkboxstyle" title="www.corsair.com/us/en/downloads">
+					<input type="checkbox" id="corsairicue"><img src="images/Icon/corsairicue.png">Corsair iCUE</label>
+					<br>
+					<label class="checkboxstyle" title="www.asus.com/campaign/aura/global/download.php">
+					<input type="checkbox" id="asusaurasync"><img src="images/Icon/asusaurasync.png">Asus Aura Sync</label>
+				</ul>
+			</li>
+
+<!--Utilities-->
+            <li class="homepage-app-section">
+                <h2>Utilities</h2>
+                <ul class="list-unstyled">
+                    <label class="checkboxstyle" title="www.notepad-plus-plus.org/downloads">
+                    <input type="checkbox" id="notepad"><img src="images/Icon/notepad.png">Notepad++</label>
+                    <br>
+                    <label class="checkboxstyle" title="www.libreoffice.org/download/download">
+                    <input type="checkbox" id="libreoffice"><img src="images/Icon/libreoffice.png">LibreOffice</label>
+                    <br>
+                    <label class="checkboxstyle" title="www.codesector.com/teracopy">
+                    <input type="checkbox" id="teracopy"><img src="images/Icon/teracopy.png">TeraCopy</label>
+                    <br>
+                    <label class="checkboxstyle" title="www.rainmeter.net/">
+                    <input type="checkbox" id="rainmeter"><img src="images/Icon/rainmeter.png">Rainmeter</label>
+                    <br>
+                    <label class="checkboxstyle" title="www.app.prntscr.com/cs/download.html">
+                    <input type="checkbox" id="lightshot"><img src="images/Icon/lightshot.png">LightShot</label>
+                    <br>                    
+                    <label class="checkboxstyle" title="www.ccleaner.com/defraggler">
+                    <input type="checkbox" id="defraggler"><img src="images/Icon/defraggler.png">Defraggler</label>
+                    <br>
+                    <label class="checkboxstyle" title="www.filezilla-project.org/download.php">
+                    <input type="checkbox" id="filezilla"><img src="images/Icon/filezilla.png">FileZilla</label>
+                </ul>
+            </li>
+
+<!--Creativity-->
+			<li class="homepage-app-section">
+				<h2>Creativity</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.adobe.com/creativecloud/desktop-app">
+					<input type="checkbox" id="adobecc"><img src="images/Icon/adobecc.png">Adobe CC</label>
+					<br>
+					<label class="checkboxstyle" title="www.blackmagicdesign.com/products/davinciresolve">
+					<input type="checkbox" id="davinciresolve"><img src="images/Icon/davinciresolve.png">DaVinci Resolve</label>
+					<br>
+					<label class="checkboxstyle" title="www.blender.org/download">
+					<input type="checkbox" id="blender"><img src="images/Icon/blender.png">Blender</label>
+					<br>
+					<label class="checkboxstyle" title="www.gimp.org/downloads">
+					<input type="checkbox" id="gimp"><img src="images/Icon/gimp.png">GIMP</label>
+				</ul>
+			</li>
+
+<!--Development-->
+			<li class="homepage-app-section">
+				<h2>Development</h2>
+				<ul class="list-unstyled">
+					<label class="checkboxstyle" title="www.visualstudio.microsoft.com/downloads">
+					<input type="checkbox" id="visualstudiocode"><img src="images/Icon/visualstudiocode.png">Visual Studio & Code</label>
+					<br>
+					<label class="checkboxstyle" title="www.sublimetext.com">
+					<input type="checkbox" id="sublimetext"><img src="images/Icon/sublimetext.png">Sublime Text</label>
+					<br>
+					<label class="checkboxstyle" title="www.autohotkey.com">
+					<input type="checkbox" id="autohotkey"><img src="images/Icon/autohotkey.png">AutoHotkey</label>
+					<br>
+					<label class="checkboxstyle" title="www.git-scm.com/downloads">
+					<input type="checkbox" id="git"><img src="images/Icon/git.png">Git</label>
+				</ul>
+			</li>
+
+
+		</ul>
+	</div>
+		<div class="container text-center">
+			<h2>3. Generate links for selected apps</h2>
+			<button class="button" onclick="generate()">Generate</button>
+			<br><br>
+		</div>
+		<div class="beta">
+			<a>BETA v0.8</a>
+			<br>
+			<a>2.5.2020</a>
+		</div>
+
+
+	<!--Edge modal-->
+	<div id="edgemodal" class="w3-modal text-center">
+    	<div class="w3-modal-content w3-animate-zoom">
+      		<div class="w3-container" style="background-image: url(images/backgroundlight.jpg); color: black">
+        		<span onclick="document.getElementById('edgemodal').style.display='none'" class="w3-button w3-display-topright" style="border-left: 1px solid;border-bottom: 1px solid; border-color: black">&times;</span>
+    			<H4>You'll need to go to the settings and disable blocking pop-ups.</H4>
+    			<p><img src="images/threedots.png" style="width: 36px;height: 36px">-> <img src="images/settings.png" style="width: 94px;height: 36px">-> <img src="images/security.png" style="width: 151px;height: 36px">-> <img src="images/block.png" style="width: 112px;height: 57px"></p>
+     		</div>
+   	 	</div>
+ 	 </div>
+
+	<!--Chrome modal-->
+	<div id="chromemodal" class="w3-modal text-center">
+    	<div class="w3-modal-content w3-animate-zoom">
+      		<div class="w3-container" style="background-image: url(images/backgroundlight.jpg); color: black">
+        		<span onclick="document.getElementById('chromemodal').style.display='none'" class="w3-button w3-display-topright" style="border-left: 1px solid;border-bottom: 1px solid; border-color: black">&times;</span>
+    			<p><img id="chromegif" src="images/video.gif" style="width: 449px;height: 320px"></p>
+     		</div>
+   	 	</div>
+ 	 </div>
+
+	<!--About modal-->
+	<div id="aboutmodal" class="w3-modal">
+    	<div class="w3-modal-content w3-animate-zoom text-center">
+      		<div class="w3-container" style="background-image: url(images/backgroundlight.jpg); color: black">
+        		<span onclick="document.getElementById('aboutmodal').style.display='none'" class="w3-button w3-display-topright" style="border-left: 1px solid;border-bottom: 1px solid; border-color: black">&times;</span>
+        		<h2>About Project Driverus</h2>
+    			<p>Project Driverus is clean and fast way to access download pages of apps you need when setting up a PC</p>
+    			<p>You simply select all the drivers and apps you want and PD will open download pages in new tabs</p>
+    			<p>NO automatic downloads.</p>
+    			<p>NO need to install another SW on your PC</p>
+    			
+    			<h2>About me</h2>
+    			<p>Hi, my name is CORE and I am a mechanical engineering student from Czech Republic. I created this site to help myself and others to easily setup my new or reinstalled PC</p>
+    			<h2>History</h2>
+    			<p>TL:DR: v1 bad, v2 bad, v3 good</p>
+    			<p>An idea to create PD was born way back in 2017. I used Visual Studio (I had no idea on how to code) to create an app that opens links to download drivers and other SW. This had one fatal flaw - It's a .exe app. A year later I created version 2 (still .exe) which I never completed. Now in 2020 I gave myself a goal of finally making PD usable and easily accesible for everyone -> moving to web! I didn't want to download a template and call it a day so instead I started to learn HTML. Thanks to my friend WinHawk who helped me whenever I hit the wall I created a website I am proud of and happy to share with everyone! I learned a lot just in the last month or two and I don't plan to stop making PD better every day!</p>
+     		</div>
+   	 	</div>
+ 	 </div>
+
+	<!--Support modal-->
+	<div id="supportmodal" class="w3-modal text-center">
+    	<div class="w3-modal-content w3-animate-zoom">
+      		<div class="w3-container" style="background-image: url(images/backgroundlight.jpg); color: black">
+        		<span onclick="document.getElementById('supportmodal').style.display='none'" class="w3-button w3-display-topright" style="border-left: 1px solid;border-bottom: 1px solid; border-color: black">&times;</span>
+        		<h2>Support this page</h2>
+        		<p>Money will be used to buy an official domain. Right now I am using free hosting - Thats why ".8u.cz"</p>
+    			<p>Coming soon</p>
+    			<p></p>
+
+     		</div>
+   	 	</div>
+ 	 </div>
+
+	<!--Coming soon modal-->
+	<div id="comingsoonmodal" class="w3-modal text-center">
+    	<div class="w3-modal-content w3-animate-zoom">
+      		<div class="w3-container" style="background-image: url(images/backgroundlight.jpg); color: black">
+        		<span onclick="document.getElementById('comingsoonmodal').style.display='none'" class="w3-button w3-display-topright" style="border-left: 1px solid;border-bottom: 1px solid; border-color: black">&times;</span>
+        		<h2>What's coming soon?</h2>
+    			<p>- More apps </p>
+    			<p>- Tips and tricks</p>
+    			<p>- registry scripts to clean and customize Windows</p>
+
+     		</div>
+   	 	</div>
+ 	 </div>
+
+	<!--News modal-->
+	<div id="newsmodal" class="w3-modal text-center">
+    	<div class="w3-modal-content w3-animate-zoom">
+      		<div class="w3-container" style="background-image: url(images/backgroundlight.jpg); color: black">
+        		<span onclick="document.getElementById('newsmodal').style.display='none'" class="w3-button w3-display-topright" style="border-left: 1px solid;border-bottom: 1px solid; border-color: black">&times;</span>
+        		<h2>What's new?</h2>
+    			<p>+ app xy </p>
+
+    		</div>
+   	 	</div>
+ 	 </div>
+
+    <!--Feedback modal-->
+    <div id="feedbackmodal" class="w3-modal text-center">
+        <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container" style="background-image: url(images/backgroundlight.jpg); color: black">
+                <span onclick="document.getElementById('feedbackmodal').style.display='none'" class="w3-button w3-display-topright" style="border-left: 1px solid;border-bottom: 1px solid; border-color: black">&times;</span>
+                <h2>Send Feedback</h2>
+                <p>What youd you add/change/remove? Did you find a bug?</p>
+                <form action="feedback.php" method="post">
+                    Your Nickname:<br>
+                    <input type="text" name="field1"><br>
+                    Your feedback:<br>
+                    <input type="text" name="field2" size="70"><br><br>
+                    <input type="submit" value="Submit">
+                    <h1></h1>
+                 </form>
+
+            </div>
+        </div>
+     </div>
+
+	</body>
+
+</html>
+
