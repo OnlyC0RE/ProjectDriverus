@@ -1,7 +1,7 @@
 <?php
 
 // Connect to your database
-$servername = "localhost";
+$servername = "db";
 $username = "php_docker";
 $password = "13579";
 $dbname = "php_docker";
