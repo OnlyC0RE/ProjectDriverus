@@ -72,10 +72,10 @@ body {
 img{
 	position: relative;
 	bottom: 2px;
-	margin-right: 4px;
-	margin-left: 2px;
-	width: 14px;
-	height: 14px;
+	margin-right: 3px;
+	margin-left: 3px;
+	width: 13px;
+	height: 13px;
 }
 
 .navbar{
