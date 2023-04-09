@@ -59,9 +59,9 @@
 			<br><br>
 		</div>
 		<div class="beta">
-			<a>BETA v0.8</a>
+			<a>BETA v1.0</a>
 			<br>
-			<a>2.5.2020</a>
+			<a>08/04/2023</a>
 		</div>
 
 
