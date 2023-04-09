@@ -11,9 +11,15 @@
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
 
 
-		<script>	function popup() {
+		<script>	function popup(){
 						window.open('success.html', '_blank')
-						window.open('success.html', '_blank')}
+						window.open('success.html', '_blank')
+					}
+
+					function uncheckElements(){
+						var uncheck=document.getElementsByTagName('input');
+						for(var i=0;i<uncheck.length;i++){if(uncheck[i].type=='checkbox'){uncheck[i].checked=false;}}
+					}
 		</script>
 
 	</head>
@@ -34,8 +40,8 @@
 		<div class="container text-center">
 			<br>
 			<h2>1. Allow Pop-ups in your browser</h2>
-			<button class="button" title="This will trigger po-pup blocker in your browser so you can easily disable it" onclick="popup(); document.getElementById('chromemodal').style.display='block'">Chrome / Opera / Firefox</button>
-			<button class="button" onclick="document.getElementById('edgemodal').style.display='block'">MS Edge</button>
+			<button class="button" title="This will trigger po-pup blocker in your browser so you can easily disable it" onclick="popup(); document.getElementById('chromemodal').style.display='block'">Trigger pop-up blocker</button>
+			<!--<button class="button" onclick="document.getElementById('edgemodal').style.display='block'">MS Edge</button>-->
 		</div>
 
 	<div>
@@ -55,13 +61,13 @@
 	</div>
 		<div class="container text-center">
 			<h2>3. Generate links for selected apps</h2>
-			<button class="button" onclick="generate()">Generate</button>
+			<button class="button" onclick="generate();uncheckElements();">Generate</button>
 			<br><br>
 		</div>
 		<div class="beta">
-			<a>BETA v1.0</a>
+			<a>BETA v1.1</a>
 			<br>
-			<a>08/04/2023</a>
+			<a>09/04/2023</a>
 		</div>
 
 
@@ -112,7 +118,7 @@
       		<div class="w3-container" style="background-image: url(images/backgroundlight.jpg); color: black">
         		<span onclick="document.getElementById('supportmodal').style.display='none'" class="w3-button w3-display-topright" style="border-left: 1px solid;border-bottom: 1px solid; border-color: black">&times;</span>
         		<h2>Support this page</h2>
-        		<p>Money will be used to buy an official domain. Right now I am using free hosting - Thats why ".8u.cz"</p>
+        		<p>Money will be used for damain name and running a server</p>
     			<p>Coming soon</p>
     			<p></p>
 
@@ -140,7 +146,8 @@
       		<div class="w3-container" style="background-image: url(images/backgroundlight.jpg); color: black">
         		<span onclick="document.getElementById('newsmodal').style.display='none'" class="w3-button w3-display-topright" style="border-left: 1px solid;border-bottom: 1px solid; border-color: black">&times;</span>
         		<h2>What's new?</h2>
-    			<p>+ app xy </p>
+    			<p>NEW - Moved to database! Better scaling!</p>
+				<p>NEW - Added more apps</p>
 
     		</div>
    	 	</div>
