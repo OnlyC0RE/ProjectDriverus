@@ -20,6 +20,10 @@
 						var uncheck=document.getElementsByTagName('input');
 						for(var i=0;i<uncheck.length;i++){if(uncheck[i].type=='checkbox'){uncheck[i].checked=false;}}
 					}
+					function checkElements(){
+						var uncheck=document.getElementsByTagName('input');
+						for(var i=0;i<uncheck.length;i++){if(uncheck[i].type=='checkbox'){uncheck[i].checked=true;}}
+					}
 		</script>
 
 	</head>
@@ -50,18 +54,21 @@
 			<h2 class="text-center">2. Select apps you want</h2>
 		</div>
         
-<!--Výběr-->
+	<!--Výběr-->
 		<ul class="list-unstyled center-block js-masonry" data-masonry-options='{"fitWidth": true}'>
-
 
 		<?php include 'apps.php'; ?>
 
-
 		</ul>
+
 	</div>
+	
+	<!--Generate-->	
 		<div class="container text-center">
 			<h2>3. Generate links for selected apps</h2>
 			<button class="button" onclick="generate();uncheckElements();">Generate</button>
+			<button class="button" onclick="checkElements();">CHECK ALL</button>
+			<button class="button" onclick="uncheckElements();">UNCHECK ALL</button>
 			<br><br>
 		</div>
 		<div class="beta">
@@ -69,7 +76,6 @@
 			<br>
 			<a>09/04/2023</a>
 		</div>
-
 
 	<!--Edge modal-->
 	<div id="edgemodal" class="w3-modal text-center">
